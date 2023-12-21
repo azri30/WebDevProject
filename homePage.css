@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px; /* Add margin to avoid overlap with the fixed footer */
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#conditionTable {
+    margin-top: 20px;
+}
+
+#trainDataTable,
+#railwayDataTable {
+    width: 100%;
+    border-collapse: separate;
+    margin-top: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Common styles for both tables */
+}
+
+#trainDataTable th,
+#railwayDataTable th,
+#trainDataTable td,
+#railwayDataTable td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#trainDataTable th,
+#railwayDataTable th {
+    color: #fff;
+    background-color: #333;
+}
+
+#trainDataTable tbody tr:nth-child(even),
+#railwayDataTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#trainDataTable tbody tr:hover,
+#railwayDataTable tbody tr:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+#trainDataTable th {
+    background-color: #333;
+}
+
+#railwayDataTable th {
+    background-color: #333;
+}
+
+#railwayDataTable tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Set background color to white */
+}
+
+#railwayDataTable tbody tr:hover {
+    background-color: #e0e0e0; /* Set hover color to match train table */
+}
+
+/* Add this CSS code to your existing stylesheet */
+
+.destination-meter-container {
+    text-align: center;
+    margin-top: 20px; /* Add margin or adjust as needed */
+    border: 1px solid #ccc; /* Add a border */
+    padding: 10px; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destination-meter-container h2 {
+    margin-bottom: 10px;
+    color: #333; /* Adjust the color as needed */
+}
+
+.meter {
+    width: 500px; /* Updated width */
+    height: 100px; /* Updated height */
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Add margin between title and meter */
+}
+
+.meter .fill {
+    width: 0;
+    background-color: #4caf50;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; /* Make the fill span the entire width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fillAnimation 2s ease-out forwards;
+}
+
+.meter .fill h3 {
+    margin: 0;
+    font-size: 1.2em; /* Adjust font size as needed */
+    color: white;
+    /* Add any other header styles you want */
+}
+
+.meter-train-001 .fill {
+    background-color: #4caf50; /* Green */
+    animation: fillAnimationTrain001 2s ease-out forwards;
+}
+
+/* Additional styles for Train 002 */
+.meter-train-002 .fill {
+    background-color: #4caf50; /* Blue */
+    animation: fillAnimationTrain002 1.5s ease-in-out forwards;
+}
+
+/* Additional styles for Train 003 */
+.meter-train-003 .fill {
+    background-color: #ff5722; /* Orange */
+    animation: fillAnimationTrain003 0.1s ease-in-out forwards;
+}
+
+@keyframes fillAnimationTrain001 {
+    from {
+        width: 10;
+    }
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes fillAnimationTrain002 {
+    from {
+        width: 10;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes fillAnimationTrain003 {
+    from {
+        width: 10;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
